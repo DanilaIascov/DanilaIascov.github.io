@@ -25,7 +25,7 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
     width: 100%;
 }
@@ -89,6 +89,8 @@
 	max-height: 10%;
 	flex: 0 1 10%;
 	padding: 5px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .product .name a {
 	font-size: 16px;
@@ -108,11 +110,12 @@
 }
 
 .bottom img {
-	float: right;
+    box-sizing: border-box;
+    float: right;
     background-color: #ededed;
     border-radius: 10px;
-    padding: 8px 8px;
-    height: 25px;
+    padding: 5px 5px;
+    height: 100%;
     width: auto;
     transition: all 0.3s ease;
 }
@@ -127,6 +130,7 @@
 .product .price, .product .images{
 	flex: 0 0 50%;
 	max-width: 50%;
+    height: 100%;
 }
 .product:hover {
     box-shadow: 0 16px 16px -16px rgb(0 0 0 / 50%);
@@ -143,6 +147,10 @@
 
 
 .cart:hover {
+    background-color: #FF6800;
+    transition: all 0.3s ease;
+}
+.scale:hover {
     background-color: #FF6800;
     transition: all 0.3s ease;
 }
@@ -228,6 +236,9 @@ mark{
     }
 }
 @media(max-width: 992px){
+    .all-products-body{
+        justify-content: flex-start;
+    }
 	.product-box {
     flex: 0 0 33.333333%;
     max-width: 33.33333%;
